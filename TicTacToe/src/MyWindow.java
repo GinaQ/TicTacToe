@@ -1,3 +1,4 @@
+//Comment added to test GitHub repository 2/14/18
 
 import java.awt.Color;
 import java.awt.Container;
@@ -13,7 +14,7 @@ import javax.swing.JTextField;
 
 public class MyWindow extends JFrame {
     
-    JTextField display = new JTextField();
+    JTextField myDisplay = new JTextField();
     private JButton[] b;
    
     public void initialize() {
@@ -25,10 +26,10 @@ public class MyWindow extends JFrame {
         panel.setLayout(new GridLayout(3, 3));
         contentPane.add(panel, "Center");
         Font myFont = new Font("Courier New", Font.BOLD, 18);
-        display.setEditable(false);
-        display.setFont(myFont);
-        display.setText("Play Tic-Tac-Toe: O's Turn!");
-        contentPane.add(display, "North");
+        myDisplay.setEditable(false);
+        myDisplay.setFont(myFont);
+        myDisplay.setText("Play Tic-Tac-Toe: O's Turn!");
+        contentPane.add(myDisplay, "North");
         
         ButtonListener listener = new ButtonListener();
         //Initialize the button array
@@ -71,10 +72,10 @@ public class MyWindow extends JFrame {
             values = getValues(b);
             if (count > 5) solved = judgeMove(values);
             if (solved == true) {
-                display.setText("X Won!!!");
+                myDisplay.setText("X Won!!!");
                 disableButtons(b);
             }
-            else display.setText("O's Turn!");
+            else myDisplay.setText("O's Turn!");
         }
         // process O's turn
         else {
@@ -82,14 +83,14 @@ public class MyWindow extends JFrame {
             values = getValues(b);
             if (count > 4) solved = judgeMove(values);
             if (solved == true) {
-                display.setText("O Won!!!");
+                myDisplay.setText("O Won!!!");
                 disableButtons(b);
             }
-            else display.setText("X's Turn!");
+            else myDisplay.setText("X's Turn!");
         }
         // if all buttons are pressed and no winner, then it is a tie game
         if (count == 9 && solved == false){
-            display.setText("Tie Game");
+            myDisplay.setText("Tie Game");
         }
     }
     
