@@ -16,7 +16,7 @@ public class MyWindow extends JFrame {
     private JButton[] b;
    
     public void initialize() {
-        setSize(500, 500);
+        setSize(400, 400);
         setLocation(200, 100);
         setTitle("Tic-Tac-Toe");
         Container contentPane = getContentPane();
